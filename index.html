@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Painel Administrativo - Secretaria de Saúde</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonte Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script language="javascript" type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Painel Administrativo</h1>
+        <p>Secretaria Municipal de Saúde</p>
+    </header>
+
+    <main class="container">
+
+        <!-- COLUNA ESQUERDA -->
+        <section class="left-column">
+
+            <div class="card">
+                <h2>🗂️ Rotina Diária</h2>
+
+                <ul class="task-list">
+                    <li>
+                        <span class="task-icon">✔️</span>
+                        Conferir a nova edição do Diário Oficial da Prefeitura
+                    </li>
+                    <li>
+                        <span class="task-icon">✔️</span>
+                        Conferir as novas notícias do site da Prefeitura
+                    </li>
+                    <li>
+                        <span class="task-icon">✔️</span>
+                        Conferir o Sei! Cidades
+                    </li>
+                    <li>
+                        <span class="task-icon">✔️</span>
+                        Conferir a Planilha da Farmácia
+                    </li>
+                    <li>
+                        <span class="task-icon">✔️</span>
+                        Conferir o Protocolo Digital
+                    </li>
+                    <li>
+                        <span class="task-icon">✔️</span>
+                        Conferir o e-mail
+                    </li>
+                    <li>
+                        <span class="task-icon">✔️</span>
+                        Conferir a Planilha de Contratos
+                    </li>
+                    <li>
+                        <span class="task-icon">✔️</span>
+                        Conferir a Planilha de Processos
+                    </li>
+                    <li>
+                        <span class="task-icon">✔️</span>
+                        Conferir os editais publicados e os pedidos de esclarecimento
+                    </li>
+                    <li>
+                        <span class="task-icon">✔️</span>
+                        Conferir a Planilha de Empenhos e Notas Fiscais
+                    </li>
+                    <li>
+                        <span class="task-icon">✔️</span>
+                        Conferir notas fiscais e empenhos
+                    </li>
+                    <li>
+                        <span class="task-icon">✔️</span>
+                        Atualizar a data contábil
+                    </li>
+                    <li>
+                        <span class="task-icon">✔️</span>
+                        Conferir o calendário
+                    </li>
+                    <li>
+                        <span class="task-icon">✔️</span>
+                        Conferir a agenda e a planilha das tarefas diárias
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>📅 Rotina Semanal</h2>
+
+                <ul class="task-list">
+                    <li>
+                        <span class="task-icon">✔️</span>
+                        Fazer backup das planilhas (3 dias por semana)
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>🗒️ Quadro de Recados</h2>
+
+                <div class="notes-container" id="notesContainer">
+                    <!-- Recados salvos aparecerão aqui -->
+
+
+
+                </div>
+
+                <div class="note-input-area">
+                    <input type="text" id="noteInput" class="note-input" placeholder="Escreva um recado rápido..."
+                        maxlength="200">
+                    <button id="addNoteButton" type="button">
+                        ➕ Adicionar
+                    </button>
+                </div>
+
+                <p class="note-hint">
+                    Recados rápidos para consulta diária.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>📌 Informações Institucionais</h2>
+                <ul class="info-list">
+                    <li><strong>CNPJ:</strong> 44.935.278/0001-26</li>
+                    <li><strong>Endereço:</strong> Rua Duque de Caxias, nº 740, Vila Yolanda</li>
+                    <li><strong>CEP:</strong> 19600-114</li>
+                    <li><strong>Horário de entrega (Almoxarifado):</strong> 07h30 às 11h / 13h30 às 16h</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>📅 Data Contábil</h2>
+
+                <p class="current-accounting-date">
+                    <strong>Data contábil vigente:</strong>
+                    <span id="dataContabilExibida">—</span>
+                </p>
+
+                <div class="date-box">
+                    <label for="dataContabil">
+                        <strong>Data contábil atual:</strong>
+                    </label>
+                    <input type="text" id="dataContabil" class="date-input" placeholder="Ex.: 05/01/2025">
+
+                    <label for="ultimaAtualizacao">
+                        <strong>Última atualização:</strong>
+                    </label>
+                    <input type="text" id="ultimaAtualizacao" class="date-input" placeholder="Automático" readonly>
+
+                    <button id="save-button" type="button">
+                        💾 Salvar data contábil
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- COLUNA DIREITA -->
+        <section class="right-column">
+
+            <div class="card">
+                <h2>⚡ Atalhos Rápidos</h2>
+
+                <div class="shortcuts-grid">
+
+                    <a href="https://scpi.rancharia.sp.gov.br/scpi9/" target="_blank" rel="noopener noreferrer"
+                        class="shortcut">📊 SCPI</a>
+                    <a href="https://interno.rancharia.sp.gov.br/pages/login" target="_blank" rel="noopener noreferrer"
+                        class="shortcut">📝 Protocolo Digital</a>
+                    <a href="https://mailpro.uol.com.br/rancharia.sp.gov.br/" target="_blank" rel="noopener noreferrer"
+                        class="shortcut">📧 E-mail UOL</a>
+                    <a href="https://rancharia.sp.gov.br/" target="_blank" rel="noopener noreferrer"
+                        class="shortcut">🏛️ Site da Prefeitura</a>
+                    <a href="https://transparencia-prefeitura.rancharia.sp.gov.br/transparencia/" target="_blank"
+                        rel="noopener noreferrer" class="shortcut">🔍 Portal da Transparência</a>
+                    <a href="https://pncp.gov.br/app/editais?q=&status=recebendo_proposta&pagina=1" target="_blank"
+                        rel="noopener noreferrer" class="shortcut">🧾 PNCP</a>
+                    <a href="https://onedrive.live.com/:x:/g/personal/434F00670DA77F9D/EZ9klNmd_GxOkE8tiCgERqYBuGPl9e0qrqEc0vdNRvbnGA?resid=434F00670DA77F9D!sd994649ffc9d4e6c904f2d88280446a6&ithint=file%2Cxlsx&e=eRhBRT&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3gvYy80MzRmMDA2NzBkYTc3ZjlkL0VaOWtsTm1kX0d4T2tFOHRpQ2dFUnFZQnVHUGw5ZTBxcnFFYzB2ZE5SdmJuR0E_ZT1lUmhCUlQ"
+                        target="_blank" rel="noopener noreferrer" class="shortcut">💊 Receitas Farmácia</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="shortcut">📁 Controle de Processos</a>
+                    <a href="https://cidades.sei.sp.gov.br/prudente/sip/login.php?sigla_orgao_sistema=RAPRUDENTE&sigla_sistema=SEI&infra_url=L3BydWRlbnRlL3NlaS8="
+                        target="_blank" rel="noopener noreferrer" class="shortcut">🏙️ Sei! Cidades</a>
+                    <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer" class="shortcut">💬
+                        WhatsApp</a>
+                    <a href="cep.pdf" target="_blank" rel="noopener noreferrer" class="shortcut">📍 CEPs do
+                        Município</a>
+                    <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" class="shortcut">🤖
+                        ChatGPT</a>
+                    <a href="https://siscotacao.com.br" target="_blank" rel="noopener noreferrer" class="shortcut">💰
+                        SisCotação</a>
+                    <a href="https://www.bancodeprecos.com.br/" target="_blank" rel="noopener noreferrer"
+                        class="shortcut">📈 Banco de Preços</a>
+                    <a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm" target="_blank"
+                        rel="noopener noreferrer" class="shortcut">⚖️ Lei 14.133/2021</a>
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Painel pessoal • Uso administrativo • © 2025 fabioab1</p>
+    </footer>
+
+</body>
+
+</html>
